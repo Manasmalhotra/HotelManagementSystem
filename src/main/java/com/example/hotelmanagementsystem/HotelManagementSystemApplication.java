@@ -10,7 +10,7 @@ import java.util.List;
 
 @SpringBootApplication
 public class HotelManagementSystemApplication {
-    List<Room> rooms;
+
     @Bean
     public ModelMapper modelmapper(){
         return new ModelMapper();

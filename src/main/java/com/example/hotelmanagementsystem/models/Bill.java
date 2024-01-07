@@ -5,7 +5,6 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.NoArgsConstructor;
 
-import javax.annotation.processing.Generated;
 import java.util.List;
 import java.util.UUID;
 @Entity(name="Bill")

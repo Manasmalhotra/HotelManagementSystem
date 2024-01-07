@@ -1,8 +1,6 @@
 package com.example.hotelmanagementsystem.exceptions;
 
-import com.example.hotelmanagementsystem.dto.BookingResponseDTO;
 import com.example.hotelmanagementsystem.models.RoomType;
-import org.springframework.http.ResponseEntity;
 
 import java.util.Date;
 

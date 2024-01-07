@@ -10,7 +10,6 @@ import com.example.hotelmanagementsystem.models.Room;
 import com.example.hotelmanagementsystem.repository.BookingRepository;
 import jakarta.transaction.Transactional;
 import org.modelmapper.ModelMapper;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;

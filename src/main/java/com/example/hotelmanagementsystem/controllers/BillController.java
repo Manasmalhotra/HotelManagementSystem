@@ -11,13 +11,13 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.UUID;
 
 @RestController
-@RequestMapping("{bookingId}/bill")
+@RequestMapping("/bill")
 public class BillController {
     BillService billService;
     public BillController(BillService billService){
         this.billService=billService;
     }
-    @PostMapping
+    @PostMapping("/{bookingId}")
     public ResponseEntity<Bill>generateBill(@PathVariable UUID bookingId){
         return ResponseEntity.ok(billService.generateBill(bookingId));
     }

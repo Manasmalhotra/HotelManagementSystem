@@ -1,5 +1,6 @@
 package com.example.hotelmanagementsystem.services;
 
+import com.example.hotelmanagementsystem.exceptions.PaymentFailedException;
 import com.example.hotelmanagementsystem.models.*;
 import org.springframework.stereotype.Service;
 
@@ -30,6 +31,9 @@ public class BillServiceImpl implements BillService{
         amount*=days;
         List<Payment>payments=new ArrayList<>();
         Payment payment=paymentService.getPayment(amount);
+        if(!payment.getPaymentStatus().equals(PaymentStatus.SUCCESS)){
+            throw new PaymentFailedException(payment.getPaymentId(),payment.getAmount());
+        }
         payments.add(payment);
         return Bill.builder().billStatus(BillStatus.PAID).payments(payments).amount(amount).build();
     }
